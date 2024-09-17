@@ -219,7 +219,7 @@ export const NestedListComponent = () => {
         </Drop>
       </DragAndDrop>
 
-      <div style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '83px' }}>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '83px',width: '100%' }}>
         <button className="Add_product" onClick={addproduct}>
           Add Product
         </button>
