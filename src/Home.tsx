@@ -6,6 +6,7 @@ import TextFieldComponent from './component/TextFieldComponent.tsx';
 import CloseIcon from '@mui/icons-material/Close';
 import Model from "./component/Model.tsx";
 import { Button } from "@shopify/polaris";
+import Header from "./component/Header.tsx";
 
 export const NestedListComponent = () => {
   const [visibleDiscount, setVisible] = useState<any[]>([]);
@@ -39,29 +40,6 @@ export const NestedListComponent = () => {
           category.id != sourceCategoryId
             ? category
             : { ...category, variants: updatedOrder }
-        );
-
-        setCategories(updatedCategories);
-      } else {
-        const sourceOrder = categories.find(
-          (category: any) => category.id == sourceCategoryId
-        ).variants;
-        const destinationOrder = categories.find(
-          (category: any) => category.id == destinationCategoryId
-        ).variants;
-
-        const [removed] = sourceOrder.splice(source.index, 1);
-        destinationOrder.splice(destination.index, 0, removed);
-
-        destinationOrder[removed] = sourceOrder[removed];
-        delete sourceOrder[removed];
-
-        const updatedCategories = categories.map((category: any) =>
-          category.id == sourceCategoryId
-            ? { ...category, variants: sourceOrder }
-            : category.id == destinationCategoryId
-              ? { ...category, variants: destinationOrder }
-              : category
         );
 
         setCategories(updatedCategories);
@@ -121,14 +99,19 @@ export const NestedListComponent = () => {
 
   }
   return (
+    <>
+    <Header/>
     <div style={{
-      display: 'flex', flexDirection: 'column', height: '600px',
-      // overflow: 'auto',
+      display: 'flex', flexDirection: 'column', height: 'auto',minHeight:'600px',
+      
       width: '100%',
-      paddingLeft: '190px',
-      paddingRight: '200px',
-      paddingTop: '30px'
+      paddingLeft: '400px',
+      paddingRight: '400px',
+      paddingTop: '0px',
+      paddingBottom: '30px'
+
     }}>
+      
       <div style={{ display: 'flex', marginBottom: '30px', marginLeft: '40px', fontSize: '15px', fontWeight: 500 }}>
         Add products
       </div>
@@ -236,11 +219,14 @@ export const NestedListComponent = () => {
         </Drop>
       </DragAndDrop>
 
-      <div style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '65px' }}>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '60px' }}>
         <button className="Add_product" onClick={addproduct}>
           Add Product
         </button>
       </div>
     </div>
+
+    </>
+    
   );
 };
