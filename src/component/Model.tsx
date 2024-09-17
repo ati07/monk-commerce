@@ -99,9 +99,11 @@ const handleSearch = useCallback(
 // Fetch products from the API
 const fetchProducts = async (pageNum: number, query: string) => {
   setLoading(true);
+  let url = 'http://stageapi.monkcommerce.app/task/products/search'
   try {
     const response = await axios.get(
-      `/api/task/products/search`,
+      // `/api/task/products/search`,
+      url,
       {
         params: {
           search: query,

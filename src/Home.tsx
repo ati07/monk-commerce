@@ -183,7 +183,7 @@ export const NestedListComponent = () => {
                           style={{ marginRight: '15px' }}
                         >
                           <div className="item-child">{item.title}</div>
-                          <div style={{ width: '174px', height: '32px', marginLeft: '15px', color: '#fff' }}>
+                          <div style={{ width: '170px', height: '32px', marginLeft: '10px', color: '#fff' }}>
 
 
 
@@ -202,7 +202,7 @@ export const NestedListComponent = () => {
                                 }} />
                                 <PopoverWithActionListExample />
                               </div>
-                              : <button onClick={() => onDiscount(item.id)} style={{ width: '174px', height: '32px', gap: '4px', borderRadius: '4px', border: '2px', color: '#fff', background: '#008060' }}>Add Discount</button>}
+                              : <button onClick={() => onDiscount(item.id)} style={{ width: '170px', height: '32px', gap: '4px', borderRadius: '4px', border: '2px', color: '#fff', background: '#008060' }}>Add Discount</button>}
                           </div>
                           <div style={{ position: 'relative', left: '7px' }}>
                             {category.variants.length > 1 && <CloseIcon onClick={() => deleteVariants(item.id)} style={{ color: '#00000066' }} />}
@@ -219,7 +219,7 @@ export const NestedListComponent = () => {
         </Drop>
       </DragAndDrop>
 
-      <div style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '60px' }}>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '83px' }}>
         <button className="Add_product" onClick={addproduct}>
           Add Product
         </button>
