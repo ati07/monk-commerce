@@ -1,0 +1,280 @@
+body {
+  margin: 1rem;
+  padding: 1rem;
+  /* min-height: 0% !important;
+  height: 0% !important; */
+  /* margin: 0; */
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  justify-content: center;
+  background-color: rgba(241, 241, 241, 1);
+  /* height:600px; */
+}
+
+[data-lock-scrolling] [data-lock-scrolling-wrapper] {
+  overflow: hidden;
+  height: 400px !important;
+}
+
+.css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: #008060 !important;
+}
+
+
+.Polaris-Text--break {
+  /* overflow-wrap: anywhere;
+  word-break: normal; */
+  font-size: 18px !important;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.title {
+  /* font-family: 'SF Pro Text'; */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.child {
+  /* font-family: 'SF Pro Text'; */
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+
+}
+
+.cancel {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 104px;
+  height: 32px;
+  top: 824px;
+  left: 845px;
+  gap: 0px;
+  border-radius: 4px;
+  margin-right: 10px;
+  border: 1px solid #00000066
+}
+
+.add {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 32px;
+  top: 824px;
+  left: 959px;
+  gap: 0px;
+  border-radius: 4px;
+  border: 2px;
+  background: #008060;
+  border: 2px solid #008060;
+  color: #fff;
+}
+
+.img {
+  width: 36px;
+  height: 36px;
+  /* top: 361px;
+  left: 456px; */
+  gap: 0px;
+  border-radius: 4px;
+  opacity: 0px;
+  margin-right: 10px
+}
+
+.draggable {
+  display: flex;
+  align-items: center;
+  /* gap: 1rem; */
+  margin: 1rem;
+}
+
+.draggable-category {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem;
+  width: 500px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.drag-handle {
+  display: flex;
+  /* border: 2px solid blue;
+  background: cornflowerblue;
+  padding: 1rem;
+  border-radius: 4px; */
+}
+
+.category-container {
+  width: 90%;
+}
+
+.item {
+  box-shadow: 0px 2px 4px 0px #0000001A;
+  width: 215px;
+  height: 32px;
+  top: 204px;
+  left: 344px;
+  gap: 0px;
+  border: 1px;
+  background: #FFFFFF;
+}
+
+.item-child {
+  box-shadow: 0px 2px 4px 0px #0000001A;
+  width: 190px;
+  height: 31px;
+  border-radius: 30px;
+  border: 1px;
+  background: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+.typography {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+
+}
+
+.Polaris-Frame {
+  min-height: 0 !important;
+  width: 50px !important;
+  background-color: none !important;
+}
+
+.Polaris-Button {
+  box-shadow: none !important;
+}
+
+#AppFrameMain {
+  background-color: #FFFFFF;
+}
+.Add_product{
+  width: 193px;
+height: 48px;
+top: 257px;
+left: 520px;
+gap: 0px;
+border-radius: 4px 0px 0px 0px;
+opacity: 0px;
+border: 2px solid #008060
+}
+.Polaris-Icon {
+  margin-top: 5px !important;
+  margin-left: 10px !important;
+  color: hsla(0, 0%, 0%, 0.4);
+}
+
+.child>div>.Polaris-Select>.Polaris-Select__Backdrop {
+  border: none !important;
+  border-radius: 0 !important;
+  color: #000000 !important;
+  font-size: 15px !important;
+  border-radius: 30px !important;
+  box-shadow: 0px 2px 4px 0px #0000001A;
+}
+
+.child>div>.Polaris-Select {
+  width: 107px !important;
+  height: 31px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  color: #000000 !important;
+  font-size: 15px !important;
+  border-radius: 30px !important;
+  box-shadow: 0px 2px 4px 0px #0000001A;
+}
+
+.Polaris-Select__Backdrop {
+  border: none !important;
+  border-radius: 0 !important;
+  color: #000000 !important;
+  font-size: 15px !important;
+  box-shadow: 0px 2px 4px 0px #0000001A;
+}
+
+.Polaris-Select {
+  width: 107px !important;
+  height: 31px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  color: #000000 !important;
+  font-size: 15px !important;
+  box-shadow: 0px 2px 4px 0px #0000001A;
+}
+
+.Polaris-TextField__Backdrop {
+  border-radius: 0px !important;
+  border: 1px solid #00000012 !important;
+}
+
+
+
+
+
+/* body {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.draggable {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.draggable-category {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+.drag-handle {
+  border: 2px solid blue;
+  background: cornflowerblue;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.category-container {
+  width: 90%;
+}
+
+.item {
+  border: 2px solid gray;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 100%;
+  background: lightgray;
+} */
