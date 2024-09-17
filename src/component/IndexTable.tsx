@@ -83,6 +83,7 @@ export default function IndexTable({ data, loading,callback }: any) {
                         checked={checked.includes(true)}
                         // indeterminate={checked[0] }
                         onChange={handleChange1}
+                        style={checked.includes(true)?{color:  '#008060'}:{}}
                     />
                 }
             />}
@@ -94,7 +95,7 @@ export default function IndexTable({ data, loading,callback }: any) {
                         <FormControlLabel
                             key={j}
                             label={<h3 className='child'>{i.title}</h3>}
-                            control={<Checkbox  checked={checked[j]} onChange={(e: any) => handleChange2(e, j)} />}
+                            control={<Checkbox  style={checked.includes(true)?{color:'#008060'}:{}} checked={checked[j]} onChange={(e: any) => handleChange2(e, j)} />}
                         />
                     </>
 
