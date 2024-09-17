@@ -4,7 +4,7 @@ import { Frame, Modal } from '@shopify/polaris';
 import { EditIcon } from '@shopify/polaris-icons';
 import AutocompleteSearch from "./Searchbar.tsx";
 import IndexTable from "./IndexTable.tsx";
-import { Divider } from "@mui/material";
+import { Box, Divider, LinearProgress } from "@mui/material";
 import axios from 'axios';
 import { debounce } from 'lodash';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -18,6 +18,7 @@ function Model({ categories, setCategories, id }: any) {
   const [data, setData] = useState<any[]>([])
   const [page, setPage] = useState(1); // Start from page 1
   const [loading, setLoading] = useState(false);
+  const [callApi, setCallApi] = useState(false);
   const [hasMore, setHasMore] = useState(true); // Flag to check if more products are available
   const [searchQuery, setSearchQuery] = useState(''); // Default search query
   const observer = useRef();
@@ -99,6 +100,7 @@ const handleSearch = useCallback(
 // Fetch products from the API
 const fetchProducts = async (pageNum: number, query: string) => {
   setLoading(true);
+  setCallApi(true)
   let url = 'https://stageapi.monkcommerce.app/task/products/search'
   try {
     const response = await axios.get(
@@ -167,14 +169,16 @@ return (
 
     >
       <div style={{ display: 'flex', height: '50px', zIndex: 10000, background: 'rgb(255 255 255)', position: 'sticky', top: 0, padding: '10px' }}>
-        <AutocompleteSearch handleSearch={handleSearch} />
+        <AutocompleteSearch handleSearch={handleSearch} Loading={loading} />
+        
       </div>
       <Modal.Section>
 
 
         <BlockStack>
           <Divider orientation="horizontal" style={{ marginTop: '10px', width: '105%', marginLeft: '-15px' }} />
-          {data.length > 0 && data.map((i: any, j: number) => <div key={j} ref={lastProductElementRef} ><IndexTable key={j} ref={lastProductElementRef} loading={loading} data={i} callback={callback} />{loading && <div key={j} ref={lastProductElementRef} ><CircularProgress/></div>}</div>)}
+          {data.length > 0 && data.map((i: any, j: number) => <div key={j} ref={lastProductElementRef} ><IndexTable key={j} ref={lastProductElementRef} loading={loading} data={i} callback={callback} /><div key={j} ref={lastProductElementRef} ></div></div>)}
+          
         </BlockStack>
 
         {/* <div style={{}}> */}

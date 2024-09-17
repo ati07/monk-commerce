@@ -1,8 +1,9 @@
+import { Box, LinearProgress } from '@mui/material';
 import {Autocomplete, Icon} from '@shopify/polaris';
 import {SearchIcon} from '@shopify/polaris-icons';
 import {useState, useCallback, useMemo} from 'react';
 
-function AutocompleteSearch({handleSearch}:any) {
+function AutocompleteSearch({Loading,handleSearch}:any) {
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState('');
@@ -56,6 +57,9 @@ function AutocompleteSearch({handleSearch}:any) {
         loading={loading}
         textField={textField}
       />
+      {Loading && <Box sx={{ width: '100%' }}>
+      <LinearProgress style={{color:'gray'}}/>
+    </Box>}
     </div>
   );
 }
