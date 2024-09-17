@@ -23,7 +23,7 @@ function Model({ categories, setCategories, id }: any) {
   const observer = useRef();
 
   const handleAddChange = useCallback(() => {
-    console.log("categories", selectedProduct, categories);
+    // console.log("categories", selectedProduct, categories);
 
     setActive(!active)
     // setCategories((prev:any)=>[...prev,...selectedProduct])
@@ -51,7 +51,7 @@ function Model({ categories, setCategories, id }: any) {
 
 
   setCategories((prev: any) => [...data])
-
+  setData([])
 }, [active, categories, selectedProduct])
 
 const callback = (d: any) => {
