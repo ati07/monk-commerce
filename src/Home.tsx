@@ -157,7 +157,7 @@ export const NestedListComponent = () => {
 
                     </div>
                     <div style={{ width: '10%', justifyContent: 'center', display: 'flex' }}>
-                      {category.variants.length > 0 && <CloseIcon onClick={() => deleteProduct(category.id)} style={{ color: '#00000066' }} />}
+                      {category.variants.length > 0 && <CloseIcon onClick={() => deleteProduct(category.id)} style={{ color: '#00000066',cursor: 'pointer' }} />}
                     </div>
 
                   </div>
@@ -205,7 +205,7 @@ export const NestedListComponent = () => {
                               : <button onClick={() => onDiscount(item.id)} style={{ width: '170px', height: '32px', gap: '4px', borderRadius: '4px', border: '2px', color: '#fff', background: '#008060' }}>Add Discount</button>}
                           </div>
                           <div style={{ position: 'relative', left: '7px' }}>
-                            {category.variants.length > 1 && <CloseIcon onClick={() => deleteVariants(item.id)} style={{ color: '#00000066' }} />}
+                            {category.variants.length > 1 && <CloseIcon onClick={() => deleteVariants(item.id)} style={{ color: '#00000066',cursor: 'pointer' }} />}
                           </div>
 
                         </Drag>
