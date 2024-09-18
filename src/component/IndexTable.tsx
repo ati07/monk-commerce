@@ -3,20 +3,9 @@ import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Divider from '@mui/material/Divider';
-import { useInView } from 'react-intersection-observer';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const LazyImage = ({ src,width,height,className, alt }:any) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
-  return (
-    <div ref={ref}>
-      {inView && <img src={src} alt={alt} className={className} width={width} height={height}/>}
-    </div>
-  );
-};
 export default function IndexTable({ data, loading,callback }: any) {
     // true, false
     const [checked, setChecked] = React.useState<any[]>([]);
@@ -74,8 +63,15 @@ export default function IndexTable({ data, loading,callback }: any) {
             {checked.length > 0 && <FormControlLabel
                 label={
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <LazyImage src={data.image.src} width={36} height={36} className='img' alt='image'/>
-
+                        <LazyLoadImage 
+                            src={data.image.src} 
+                            width={36} 
+                            height={36} 
+                            className='img' 
+                            alt='image' 
+                            effect='blur'
+                            placeholderSrc='../assets/blur.png'
+                        />
                         <h2 className='title'>{data.title}</h2>
                     </div>}
                 control={
